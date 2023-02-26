@@ -112,7 +112,7 @@ class Player(commands.Cog):
             await interaction.response.send_message("You are not in a voice channel!", ephemeral=True)
 
 
-    @app_commands.command(name="stop", description="Stop playing the shuffled playlist")
+    @app_commands.command(name="stop", description="Stops the current song")
     async def stop(self, interaction: discord.Interaction):
         voice_state = interaction.user.voice
         
@@ -147,6 +147,7 @@ class Player(commands.Cog):
         embeds = []
         song_list = os.listdir(os.path.join(os.path.dirname(__file__), os.path.join("..", "nbs")))
         song_list.sort(reverse=True)
+        song_list.remove("more.txt")
 
         q = deque(song_list)
 
