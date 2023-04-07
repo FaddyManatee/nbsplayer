@@ -7,6 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 from paginator import Paginator
+from string import capwords
 from collections import deque
 
 
@@ -63,7 +64,7 @@ class Player(commands.Cog):
             voice = await voice_channel.connect()
 
         # Capitalize each word in song title input.
-        song = song.title()
+        song = capwords(song)
 
         await interaction.response.defer()
         try:
