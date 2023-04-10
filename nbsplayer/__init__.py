@@ -1,2 +1,2 @@
-import nbswave
-from . import nbsplayer
+from .nbswave import *
+from .nbsplayer import *
