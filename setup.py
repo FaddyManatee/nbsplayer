@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="embed-pagination",
+    name="nbsplayer",
     version="1.0.0",
     description="A discord.py cog that adds Minecraft note block song playback functionality to your bot.",
     long_description=long_description,
